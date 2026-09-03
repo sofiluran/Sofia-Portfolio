@@ -1,5 +1,8 @@
+'use client'
+
 import Socials from "../Socials"
 import Image from "next/image"
+import { motion } from "framer-motion"
 
 const Contact = () => {
   return (
@@ -8,22 +11,33 @@ const Contact = () => {
         <h2 className="font-extrabold italic text-3xl sm:text-4xl md:col-start-1 md:col-end-2 md:row-start-1 md:row-end-2 md:mb-4 md:text-5xl">
           Say hello!
         </h2>
-        <div className="justify-self-center md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-3">
+        <motion.div
+          className="justify-self-center md:col-start-2 md:col-end-3 md:row-start-1 md:row-end-3"
+          initial={{ opacity: 0, x: 30, scale: 0.98 }}
+          whileInView={{ opacity: 1, x: 0, scale: 1 }}
+          viewport={{ once: false, margin: "-100px" }}
+          transition={{
+            type: "spring",
+            stiffness: 80,
+            damping: 20,
+            mass: 1,
+          }}>
           <Image
             src="/images/Sofia.png"
             alt="Picture of Sofia"
             width={220}
             height={220}
             className="h-auto w-36 sm:w-44 md:h-50 md:w-auto md:max-w-55"
+            priority
           />
-        </div>
+        </motion.div>
         <ul className="space-y-2 text-center text-base normal-case sm:text-lg md:mb-8 md:text-[18px]">
           <li>✨ Frontend Developer</li>
           <li>📍 Stockholm / Remote</li>
           <li>💬 Open to collaboration</li>
           <li>🎬 Background in storytelling & visual culture</li>
         </ul>
-        <a 
+        <a
           href="mailto:runsten.sofia@gmail.com"
           className="block rounded-lg bg-orange-400 px-6 py-3.5 text-base font-bold text-white no-underline transition-all duration-300 hover:-translate-y-0.5 hover:bg-purple-500 sm:text-[1.1rem] md:col-span-2 md:mt-8 md:px-7"
         >
@@ -31,7 +45,7 @@ const Contact = () => {
         </a>
       </div>
       <Socials />
-    </section>
+    </section >
   )
 }
 
