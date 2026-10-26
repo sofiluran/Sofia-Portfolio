@@ -21,6 +21,26 @@ export const MyProjects = [
     liveUrl: "https://scouterna.vercel.app/sv",
   },
   {
+    id: "kransen",
+    title: "Vad Händer i Kransen",
+    category: "",
+    description: "This fullstack application is built with Supabase and PostgreSQL, featuring user authentication and CRUD operations. Users can sign up, log in, create and manage their own events, upload and edit images, search for posts by title, and interact through comments. The application includes role-based access control to ensure users can only edit or delete their own content, while post authors can moderate comments on their posts. ",
+    tags: ["PostgreSQL","Fullstack", "Supabase", "CRUD"],
+    image: "/images/kransen.png",
+    githubUrl: "https://github.com/sofiluran/Vad-hander-i-kransen.git",
+    liveUrl: "https://vad-hander-i-kransen.vercel.app/",
+  },
+    {
+    id: "mumsmums",
+    title: "MumsMums - Your favourite recipes",
+    category: "",
+    description: "A responsive multipage recipe website built with TypeScript and React Context, using the MealDB API to fetch recipe and category data. Users can log in, select a favourite category, explore recipes, and save their favourite meals to a personal profile. The application uses context to manage user-specific data and maintain login state across routes, with dynamically rendered pages displaying detailed information for each recipe.",
+    tags: ["React Context","Typescript", "API"],
+    image: "/images/mumsmums.png",
+    githubUrl: "https://github.com/sofiluran/context-assignment-.git",
+    liveUrl: "https://context-assignment-omega.vercel.app",
+  },
+  {
     id: "testing",
     title: "IKEA, Rock Band or Pokémon",
     category: "Skolprojekt • Individuellt",
@@ -30,7 +50,7 @@ export const MyProjects = [
     githubUrl: "https://github.com/sofiluran/testing-quiz.git",
     liveUrl: "https://testing-quiz-lime.vercel.app/",
   },
-    {
+  {
     id: "workout",
     title: "Workout Timer",
     category: "",
@@ -80,7 +100,7 @@ export const MyProjects = [
     githubUrl: "https://github.com/sofiluran/cocktails.git",
     liveUrl: "https://cocktails-topaz.vercel.app/",
   },
-    {
+  {
     id: "skal",
     title: "Skål Stockholm",
     category: "",
